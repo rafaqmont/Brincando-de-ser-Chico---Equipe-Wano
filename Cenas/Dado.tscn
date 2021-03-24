@@ -1,0 +1,51 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Cenas/Dado.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Botoes/girar_dado.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Sprites_dado/face1.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Sprites_dado/face2.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Sprites_dado/face3.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Sprites_dado/face5.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Sprites_dado/face6.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Sprites_dado/face4.png" type="Texture" id=8]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 8 ), ExtResource( 6 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ null, null, null, null, null, null, ExtResource( 3 ) ],
+"loop": true,
+"name": "New Anim",
+"speed": 5.0
+} ]
+
+[node name="Node" type="Node"]
+script = ExtResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 809.044, 613.892 )
+scale = Vector2( 0.5, 0.5 )
+z_index = -1
+frames = SubResource( 1 )
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_left = 864.0
+margin_top = 600.0
+margin_right = 1041.0
+margin_bottom = 663.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="TextureButton"]
+position = Vector2( 89.6928, 35.7424 )
+z_index = -1
+texture = ExtResource( 2 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+[connection signal="button_up" from="TextureButton" to="." method="dado_clicado"]
+[connection signal="timeout" from="Timer" to="." method="fim_timer"]

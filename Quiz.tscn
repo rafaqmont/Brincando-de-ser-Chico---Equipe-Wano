@@ -1,0 +1,86 @@
+[gd_scene format=2]
+
+[node name="Quiz" type="Node"]
+
+[node name="Questão" type="Label" parent="."]
+margin_right = 1087.0
+margin_bottom = 214.0
+text = "Quando Chico da silva nasceu?
+"
+align = 1
+valign = 1
+autowrap = true
+percent_visible = -0.04
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonLayer" type="CanvasLayer" parent="."]
+
+[node name="True" type="Button" parent="ButtonLayer"]
+margin_left = 431.254
+margin_top = 239.173
+margin_right = 643.254
+margin_bottom = 259.173
+text = "1910"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="ButtonLayer"]
+margin_left = 431.25
+margin_top = 280.0
+margin_right = 643.25
+margin_bottom = 300.0
+text = "1970"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button3" type="Button" parent="ButtonLayer"]
+margin_left = 431.25
+margin_top = 319.62
+margin_right = 643.25
+margin_bottom = 339.62
+text = "1930"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AwnserLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="AwnserLayer"]
+margin_left = 431.25
+margin_top = 239.17
+margin_right = 643.25
+margin_bottom = 259.17
+text = "test"
+align = 1
+percent_visible = 0.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="AwnserLayer"]
+margin_left = 431.25
+margin_top = 280.0
+margin_right = 643.25
+margin_bottom = 300.0
+text = "test"
+align = 1
+percent_visible = 0.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="AwnserLayer"]
+margin_left = 431.25
+margin_top = 319.62
+margin_right = 643.25
+margin_bottom = 339.62
+text = "teste"
+align = 1
+percent_visible = 0.0
+__meta__ = {
+"_edit_use_anchors_": false
+}

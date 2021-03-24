@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://Cenas/Voltar ao jogo.gd" type="Script" id=2]
+[ext_resource path="res://Cenas/Ir para menu.gd" type="Script" id=3]
+
+[node name="Node" type="Node"]
+
+[node name="Voltar ao jogo" type="Button" parent="."]
+margin_left = 453.784
+margin_top = 425.983
+margin_right = 590.784
+margin_bottom = 445.983
+text = "Voltar"
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ir para menu" type="Button" parent="."]
+margin_left = 453.784
+margin_top = 468.216
+margin_right = 590.784
+margin_bottom = 488.216
+text = "Menu"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 512.256, 224.622 )
+scale = Vector2( 3.74004, 3.74004 )
+z_index = -1
+texture = ExtResource( 1 )
+[connection signal="button_up" from="Voltar ao jogo" to="Voltar ao jogo" method="voltar_ao_jogo"]
+[connection signal="button_up" from="Ir para menu" to="Voltar ao jogo" method="ir_para_menu"]

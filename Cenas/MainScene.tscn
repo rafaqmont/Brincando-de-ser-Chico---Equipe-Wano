@@ -1,0 +1,152 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Cenas/Menu_jogar.gd" type="Script" id=1]
+[ext_resource path="res://Cenas/menu_instruçoes.gd" type="Script" id=2]
+[ext_resource path="res://Fonts/Modelo_fonte_menuPrincipal.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Cenas/menu_ajustes.gd" type="Script" id=4]
+[ext_resource path="res://Fonts/AntroposFreefont-BW2G.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Sprites/Sprites_menu/Menu jogar.png" type="Texture" id=6]
+[ext_resource path="res://Cenas/menu_Créditos.gd" type="Script" id=7]
+[ext_resource path="res://Cenas/menu_sair.gd" type="Script" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+size = 30
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+font_data = ExtResource( 5 )
+
+[node name="Menu" type="Node"]
+
+[node name="Sprite_principal" type="Sprite" parent="."]
+position = Vector2( 544, 360 )
+texture = ExtResource( 6 )
+
+[node name="Jogar" type="Button" parent="."]
+margin_left = 119.0
+margin_top = 315.0
+margin_right = 270.0
+margin_bottom = 352.0
+focus_mode = 0
+size_flags_horizontal = 0
+enabled_focus_mode = 0
+flat = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label_jogar" type="Label" parent="Jogar"]
+margin_right = 151.0
+margin_bottom = 36.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.831373, 0.666667, 0.00392157, 1 )
+text = "Jogar"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="intruções" type="Button" parent="."]
+margin_left = 79.0
+margin_top = 359.0
+margin_right = 311.0
+margin_bottom = 396.0
+focus_mode = 0
+enabled_focus_mode = 0
+flat = true
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label_intruções" type="Label" parent="intruções"]
+margin_right = 233.0
+margin_bottom = 36.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.8, 0.517647, 0.466667, 1 )
+text = "Instruções"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ajustes" type="Button" parent="."]
+margin_left = 105.0
+margin_top = 403.0
+margin_right = 284.0
+margin_bottom = 440.0
+focus_mode = 0
+enabled_focus_mode = 0
+flat = true
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label_ajustes" type="Label" parent="ajustes"]
+margin_right = 180.0
+margin_bottom = 38.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.211765, 0.392157, 0.584314, 1 )
+text = "Ajustes"
+align = 1
+valign = 1
+
+[node name="Créditos" type="Button" parent="."]
+margin_left = 98.0
+margin_top = 447.0
+margin_right = 291.0
+margin_bottom = 486.0
+focus_mode = 0
+enabled_focus_mode = 0
+flat = true
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label_creditos" type="Label" parent="Créditos"]
+margin_right = 192.0
+margin_bottom = 38.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.858824, 0.482353, 0.117647, 1 )
+text = "Créditos"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sair" type="Button" parent="."]
+margin_left = 132.0
+margin_top = 491.0
+margin_right = 258.0
+margin_bottom = 528.0
+focus_mode = 0
+enabled_focus_mode = 0
+flat = true
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label_sair" type="Label" parent="sair"]
+margin_right = 126.0
+margin_bottom = 36.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.698039, 0.25098, 0.156863, 1 )
+text = "Sair"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="button_up" from="Jogar" to="Jogar" method="jogar_pressionado"]
+[connection signal="button_up" from="intruções" to="intruções" method="instrucoes_pressionado"]
+[connection signal="button_up" from="ajustes" to="ajustes" method="ajustes_pressionado"]
+[connection signal="button_up" from="Créditos" to="Créditos" method="creditos_pressionado"]
+[connection signal="button_up" from="sair" to="sair" method="sair_pressionado"]
